@@ -8,26 +8,21 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text("My App "),
+          title: Text('Image Loading'),
         ),
-        body: Container(
-          color: Colors.lightBlue,
+        body: Center(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             crossAxisAlignment: CrossAxisAlignment.stretch,
-            mainAxisSize: MainAxisSize.min,
             children: <Widget>[
-              Container(
-                child: Text("columns"),
-                color: Colors.green,
+              Image.network(
+                "https://avatars0.githubusercontent.com/u/34584911?s=460&u=8b4237140555b8344bf5d2bfa5ee2dba464bea72&v=4",
+                height: 200,
               ),
-              Container(
-                child: Text("in"),
-                color: Colors.yellow,
-              ),
-              Container(
-                child: Text("flutter"),
-                color: Colors.orange,
-              ),
+              Image.asset(
+                'bike.jpg',
+                height: 200,
+              )
             ],
           ),
         ),
