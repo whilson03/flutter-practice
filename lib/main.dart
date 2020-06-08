@@ -10,24 +10,25 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: Text("My App "),
         ),
-        body: Center(
-          child: Container(
-            alignment: Alignment.center,
-            padding: EdgeInsets.all(12),
-            margin: EdgeInsets.all(24),
-            constraints: BoxConstraints.expand(height: 300),
-            decoration: BoxDecoration(
-              color: Colors.orange,
-              border: Border.all(
-                width: 8.0,
-                color: Colors.red[200],
+        body: Container(
+          color: Colors.lightBlue,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            mainAxisSize: MainAxisSize.min,
+            children: <Widget>[
+              Container(
+                child: Text("columns"),
+                color: Colors.green,
               ),
-              borderRadius: BorderRadius.circular(12.0),
-            ),
-            child: Text(
-              'Hello world',
-              textAlign: TextAlign.center,
-            ),
+              Container(
+                child: Text("in"),
+                color: Colors.yellow,
+              ),
+              Container(
+                child: Text("flutter"),
+                color: Colors.orange,
+              ),
+            ],
           ),
         ),
       ),
