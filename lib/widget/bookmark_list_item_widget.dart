@@ -10,7 +10,7 @@ class BookMarkListItemWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () => navigateToViewBookmarkPage(context),
+      onTap: () => navigateToViewBookmarkPage(bookmark, context),
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Column(
